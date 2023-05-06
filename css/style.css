@@ -1,0 +1,364 @@
+*{
+    margin: 0px;
+    box-sizing: bo;
+}
+
+/*|| Barra negra pre-principal*/
+.pre-barra{
+    background: #222222;
+    height: 30px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.pre-barra  p {
+     color: white;
+     font-size: 18px;
+     font-family:'Roboto';
+     
+}
+
+.pre-barra > ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    color: aliceblue;
+    font-weight: 400;
+    font-family:'Roboto';
+    font-size: 18px;
+    margin-right: 20px;
+
+}
+
+/*|| Barra Principal*/
+
+
+.barra-principal{
+    background: #F0A83E;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    
+}
+
+.barra-principal .logo{
+    margin-left: 20px;
+}
+
+.nav-toggle{
+    display: none;
+}
+
+
+
+.menu ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    color: white;
+    font-family:'Roboto';
+    font-weight: 600;
+    margin-right:20px ;
+   
+   
+}
+
+.menu ul li {
+    cursor: pointer;
+  
+
+    
+}
+
+.menu ul li > img{
+    width: 20px;
+    margin: 0 5px;
+  
+}
+
+/*|| MAIN */
+
+.main-banner{
+
+   
+    position: relative;
+
+   
+}
+
+
+.main-banner img{
+
+    width: 100%;
+
+
+}
+
+.main-banner .text-banner {
+
+    position:absolute;
+    top: 290px;
+    left:1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    gap: 20px;
+    width: 700px;
+    
+   
+}
+
+
+
+.text-banner h1{
+
+background-color: white;
+padding: 20px;
+border-radius: 5px;
+color: #3C2313;
+font-family:'Roboto';
+font-style: normal;
+font-weight: 800;
+font-size: 30px;
+text-align: center;
+width: 400px;
+
+line-height: 35px;
+
+}
+
+
+.text-banner p{
+    color: #3C2313;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 800;
+font-size: 21px;
+line-height: 19px;
+
+
+}
+
+.text-banner button{
+    color: white;
+    width: 141px;
+    height: 49px;
+    left: 767px;
+    top: 334px;
+    font-size: 18px;
+  
+    
+    
+    background: #F0A83E;
+    border-radius: 5px;
+    border-style: none;
+}
+
+
+
+
+
+
+
+
+    
+/*VERSION MOBILE - FIRST*/
+
+@media (max-width: 768px){ /*!! 768px hasta 0px*/
+
+     .pre-barra{
+        display: none;
+        
+     }
+
+
+
+    .barra-principal{
+        width: 100%;
+        height: 50%;
+    }
+
+    .main-banner > img{
+    
+   //*pendiente*/
+
+    }
+    
+ /*||Poscionamiente texto-banner*/
+
+
+ .main-banner .text-banner {
+
+    top: 20%;
+    left:53%;
+    width: 42%;
+    
+   
+}
+
+.text-banner h1{
+
+     font-size: 100%;
+     font-weight: 800;
+     padding: 10px;
+     width:100%;
+
+}
+
+.text-banner p {
+
+    font-size: 100%;
+}
+
+.text-banner button{
+    font-size: 18px;
+    padding: 5px;
+    width: 141px;
+
+} 
+
+
+
+
+/*|| -------------    MAIN PRODUCTS -----------------------------*/
+
+
+.flex-product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.product{
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.product img {
+    width: 10%;
+}
+
+.product h2{
+
+    color: #3C2313;
+    font-family: 'Roboto';
+}
+
+.product p {
+    color: black;
+    font-family: 'Roboto';
+}
+
+
+.item-1{
+     text-align: center;
+     margin-top: 50px;
+    
+     background: #FBFAF6;
+     height: 323px;
+    
+}
+
+
+.item-1 img{
+    width: 100%;
+   
+}
+
+.item-1 h3 {
+
+    color: #3C2313;
+    font-family: 'Roboto';
+    
+}
+
+
+.item-1  p {
+  color: #F0A83E;
+  font-family: 'Roboto';
+  font-size: 18px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+    #menu_item  {
+        position: absolute;
+        top: 58.5px;
+        left: 0;
+        
+        width: 100%;
+        height: 100%;
+        background-color: orange;
+        flex-direction: column;
+        align-items: center;
+
+        transform: translateX(-100%);
+        transition: 0.3s ease all;
+        
+       
+
+     }
+
+     .menu ul > li{
+        margin-top: 40px;
+        
+     }
+
+  /*|| Menu - Hamburguesa*/
+     .nav-toggle{
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        
+     }
+
+     .nav-toggle span{
+
+        width: 30px;
+        height: 4px;
+        background: white;
+        margin-bottom: 5px;
+        border-radius: 2px;
+        transform-origin:5px 0px;
+        transition: all 0.2s linear;
+
+     }
+       /*|| Movimento de MENU */
+    .close span{
+        transform: rotate(45deg) translate(0px, 0px); /*La propiedad CSS le permite rotar, escalar, sesgar o traducir un elemento.*/
+    }
+
+    .close span:nth-child(2){
+        display: none;
+    }
+
+    .close span:nth-child(3){
+        transform: rotate(-45deg) translate(-6px, 2px); /*La propiedad CSS le permite rotar, escalar, sesgar o traducir un elemento.*/
+    }
+
+    .open{ transform: translateX(0) !important }
+
+
+
+
+
+
+
+     
+
+}
